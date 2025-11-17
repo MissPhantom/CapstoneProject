@@ -3,3 +3,6 @@
 *.bin
 *.exe
 *.tar.gz
+.terraform/
+awscliv2.zip
+*.zip
