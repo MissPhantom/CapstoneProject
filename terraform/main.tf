@@ -11,6 +11,7 @@ resource "aws_vpc" "main" {
   }
 }
 
+
 ############################################
 # Public Subnets
 ############################################
@@ -25,6 +26,7 @@ resource "aws_subnet" "public" {
     Name = "${var.project_name}-public-${count.index + 1}"
   }
 }
+
 
 ############################################
 # Private Subnets
@@ -41,6 +43,7 @@ resource "aws_subnet" "private" {
   }
 }
 
+
 ############################################
 # Internet Gateway (for public subnets)
 ############################################
@@ -51,6 +54,7 @@ resource "aws_internet_gateway" "igw" {
     Name = "${var.project_name}-igw"
   }
 }
+
 
 ############################################
 # Public Route Table
@@ -68,11 +72,13 @@ resource "aws_route_table" "public_rt" {
   }
 }
 
+
 resource "aws_route_table_association" "public_assoc" {
   count          = length(aws_subnet.public)
   subnet_id      = aws_subnet.public[count.index].id
   route_table_id = aws_route_table.public_rt.id
 }
+
 
 ############################################
 # NAT Gateway (for private subnets)
@@ -80,6 +86,7 @@ resource "aws_route_table_association" "public_assoc" {
 resource "aws_eip" "nat_eip" {
   domain = "vpc"
 }
+
 
 resource "aws_nat_gateway" "nat" {
   allocation_id = aws_eip.nat_eip.id
@@ -89,6 +96,7 @@ resource "aws_nat_gateway" "nat" {
     Name = "${var.project_name}-nat"
   }
 }
+
 
 ############################################
 # Private Route Table
@@ -105,6 +113,7 @@ resource "aws_route_table" "private_rt" {
     Name = "${var.project_name}-private-rt"
   }
 }
+
 
 resource "aws_route_table_association" "private_assoc" {
   count          = length(aws_subnet.private)
