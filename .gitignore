@@ -53,3 +53,5 @@ terraform/*.key
 terraform/.env
 terraform/credentials
 terraform/config
+
+aws
