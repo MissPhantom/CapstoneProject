@@ -104,7 +104,7 @@ http://localhost:3000
 
 ### 1. What inspired your project?
 
-Honestly, I wasn't excited about starting the project, but I knew I had to do it. The inspiration came from the challenge itself—I wanted to prove that I could take a big task and finish it especially in the "tech" world. I chose to make the project, showing I could build a secure, two-part system (website and database) using everything I learned in the cloud bootcamp. It was about proving mastery over the tools, not just the application itself.
+Honestly, I wasn't excited about starting the project, but I knew I had to do it. The inspiration came from the challenge itself—I wanted to prove that I could take a big task and finish it especially in the "tech" field. I chose to make the project, showing I could build a secure, two-part system (website and database) using everything I learned in the cloud bootcamp. It was about proving mastery over the tools, not just the application itself.
 
 ---
 
