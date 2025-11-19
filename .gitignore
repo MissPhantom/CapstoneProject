@@ -6,3 +6,50 @@
 .terraform/
 awscliv2.zip
 *.zip
+
+# Ignore AWS credentials folder (VERY IMPORTANT)
+.aws/
+
+# Ignore AWS CLI installation files
+awscliv2.zip
+aws/
+aws-cli/
+AWSCLIV2.pkg
+
+# Ignore any .pem or private key files
+*.pem
+*.key
+
+# Ignore environment/credential files
+.env
+credentials
+config
+
+# Ignore Terraform state files
+terraform.tfstate
+terraform.tfstate.backup
+*.tfstate
+*.tfstate.*
+
+# Ignore Terraform crash logs
+crash.log
+crash.*.log
+
+# Ignore .terraform folder
+.terraform/
+
+# Ignore lock file if needed
+.terraform.lock.hcl
+
+# Ignore AWS files ONLY inside terraform/
+terraform/aws/
+terraform/awscliv2.zip
+terraform/aws-cli/
+terraform/AWSCLIV2.pkg
+
+# Terraform folder credential safety
+terraform/*.pem
+terraform/*.key
+terraform/.env
+terraform/credentials
+terraform/config
